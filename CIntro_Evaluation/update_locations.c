@@ -35,7 +35,7 @@ int main(int argc, char * argv[]) {
 
     srand(size); // Initial call to srand before generate_random_array call
 
-    TYPE * xs = generate_random_array(size, 1000.);
+    TYPE * xs = generate_random_array(size, 1000.); 
     TYPE * ys = generate_random_array(size, 1000.);
     TYPE * zs = generate_random_array(size, 1000.);
     TYPE * vx = generate_random_array(size, 1.);
@@ -57,6 +57,5 @@ int main(int argc, char * argv[]) {
     double total_time = stop_time - start_time;
 
     printf("Mean time per coordinate: %f us\n", total_time / (size * iters));
-    printf("Final checksum is: %f\n", chksum);
+    printf("Final checksum is: %f\n", chksum); // This is the only line that needs to change for float/double and various int conversions.
 }
-
